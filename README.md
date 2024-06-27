@@ -53,7 +53,7 @@ You can tag image in your computer by Ollama
 
 4. Make these scripts executable:
    ```
-   cd TagTool-With-Ollama
+   chmod +x setup_mac.sh; chmod +x run_mac.sh
    ```
 
 5. Install dependencies:
