@@ -50,6 +50,10 @@ def process_images(directory, api_url, model, trigger, prompt):
     image_files = get_image_files(directory)
     total_images = len(image_files)
 
+    if total_images == 0:
+        print("\n--------文件夹中没有图片--------\n")
+        return
+
     for i, image_name in enumerate(image_files, 1):
         image_path = os.path.join(directory, image_name)
         recognized_content = llama3_recognize(api_url, image_path, model, trigger, prompt)
